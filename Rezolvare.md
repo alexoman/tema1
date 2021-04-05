@@ -3,11 +3,35 @@
 ## 1. DNS over HTTPS
 Am implementat funcția aici:
 ```python
-print("你好")
+print("$ curl -H 'accept: application/dns-json' 'https://cloudflare-dns.com/dns-query?name=facebook.com&type=A' | jq")
 ```
 iar aici e un exemplu de execuție
 ```python
-print("你好吗")
+print(" % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100   187  100   187    0     0   1147      0 --:--:-- --:--:-- --:--:--  1147
+{
+  "Status": 0,
+  "TC": false,
+  "RD": true,
+  "RA": true,
+  "AD": false,
+  "CD": false,
+  "Question": [
+    {
+      "name": "facebook.com",
+      "type": 1
+    }
+  ],
+  "Answer": [
+    {
+      "name": "facebook.com",
+      "type": 1,
+      "TTL": 16,
+      "data": "185.60.216.35"
+    }
+  ]
+}")
 ```
 
 ## 2. Traceroute
